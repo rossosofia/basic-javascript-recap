@@ -35,8 +35,25 @@ const person = {
    myFirstname: 'Christian', myLastname: 'Kirschberg'
 };
 
+// object destructuring
 const {myFirstname, myLastname} = person;
 console.log(myFirstname, myLastname);
 
-const person1 = new Person('Sofia', 'Roller Derby');
+//creating a person object with a constructur
+const person1 = new Person('Christian', 'Cats');
 person1.greet();
+
+//javascript array
+let students = ["Patrick", "Kengo", "Lavi", "Thomas", 3, true, [], undefined]
+students.push("Kai");
+console.log(students);
+console.log(students[0]);
+let students2 = students.slice(0,3)
+console.log(students2);
+
+//Adding an object on array
+students.push({name: 'Sofia', hobby: 'Roller Skating'});
+console.log(students);
+
+//accessing a value in an array
+console.log(students[9].hobby)

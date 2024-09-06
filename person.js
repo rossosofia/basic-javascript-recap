@@ -3,7 +3,6 @@ export class Person{
     constructor(firstname, hobby){
         this.firstname = firstname;
         this.hobby = hobby;
-
     }
 
     greet(){
