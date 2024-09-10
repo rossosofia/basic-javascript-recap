@@ -19,9 +19,6 @@ export class Car{
     }
 
     //methods
-    getCarInfo(){
-        return `${this.make}, ${this.model}, ${this.year}`;
-    }
 
     start(){
         Car.isRunning = true;
