@@ -78,3 +78,63 @@ catsInMyLife.push(kitty1, kitty2);
 console.log(catsInMyLife);
 
 
+// --- exercise-array ---
+const names = ["Sofia", "Gra", "Nico", "Eli", "Ainoa"];
+console.log(names[0]);
+
+
+console.log(names.indexOf("Nico"))
+
+console.log(names.indexOf("Vanja"));
+
+names.push("Poppy");
+console.log(names);
+
+const firstThreeNames = names.slice(0, 3);
+console.log(firstThreeNames); 
+
+const friend1 = {
+    firstname: "Massimo Vincenzo",
+    lastname: "Del Piaggio",
+    email: "massi@gmail.com"
+};
+
+const friend2 = {
+    firstname: "Camilla",
+    lastname: "Gardner",
+    email: "malika@gmail.com"
+};
+
+const people = [friend1, friend2];
+console.log(people); 
+console.log(people[0].email);
+
+// --- exercise-arrays-and-objects---
+
+class Student {
+    constructor(name, id) {
+        this.name = name;
+        this.id = id;
+        this.grades = [];
+    }
+}
+
+function addGrade(student, grade) {
+    student.grades.push(grade);
+}
+
+function updateStudentName(student, newName) {
+    student.name = newName;
+}
+
+const student = new Student("Sofia", 505);
+
+updateStudentName(student, "Sofia");
+console.log(student);
+
+addGrade(student, 7);
+addGrade(student, 12);
+addGrade(student, 10);
+
+updateStudentName(student, "Sofia Amoroso");
+console.log(student);
