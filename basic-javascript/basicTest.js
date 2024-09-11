@@ -1,4 +1,5 @@
 import { Person } from "./person.js";
+import { Cat } from "./exercise-class.js"
 
 let firstname = "Christian";
 const birthDate = new Date(1979, 1, 1);
@@ -57,3 +58,23 @@ console.log(students);
 
 //accessing a value in an array
 console.log(students[9].hobby)
+
+
+// --- exercise-class ---
+
+const kitty1 = new Cat('Mio', 'Black Silver', 'Siberian');
+console.log(kitty1);
+console.log(kitty1.getData());
+console.log(kitty1.getName());
+kitty1.setName("Bolsonello");
+console.log(kitty1.getName());
+
+const kitty2 = new Cat('Mimi', 'Seal Point', 'Siamese');
+
+const catsInMyLife = [];
+
+catsInMyLife.push(kitty1, kitty2);
+
+console.log(catsInMyLife);
+
+
