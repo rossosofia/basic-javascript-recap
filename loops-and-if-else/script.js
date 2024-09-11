@@ -101,3 +101,33 @@ function isInRange(x, y, z){
 }
 
 console.log(isInRange(6, 6, 8));
+
+// --- EXERCISE 3 - HIGHER OR LOWER ---
+
+// Using if else and loops, create a javascript application that will
+// 1. Randomly select a number between 1 and 100.
+// 2. Ask the user for a quess (between 1 and 100)
+// 3. Let the user know if the quess is higher or lower than the randomly selected
+// number, and ask for a new quess, if the quess was not correct.
+// 4. Let the user know that they guessed correctly and how many guesses they used, if the guess correctly.
+
+const randomNumber = Math.floor(Math.random()*100)+1;
+console.log(randomNumber);
+let numberOfGuesses = 0;
+
+function submitGuess(){
+    const guess = document.getElementById("guess").value;
+    const message = document.getElementById("message")
+
+    numberOfGuesses++;
+
+    message.textContent = 
+    guess == randomNumber ? (message.style.color = "green", `Your guess is correct! It took you ${numberOfGuesses} tries`) : 
+    guess < randomNumber ? "Your guess is lower"  : "Your guess is higher";
+}
+
+document.getElementById("guess").addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+        submitGuess();
+    }
+})
